@@ -26,7 +26,7 @@ class Account
   end
 
   def print_all_transactions
-    @account_history.each do |transaction|
+    @account_history.reverse.each do |transaction|
       puts "#{transaction[0].date} || #{transaction[0].amount} || - || #{transaction[1]}" if transaction[0].type == 'deposit'
       puts "#{transaction[0].date} || - || #{transaction[0].amount} || #{transaction[1]}" if transaction[0].type == 'withdrawal'
     end

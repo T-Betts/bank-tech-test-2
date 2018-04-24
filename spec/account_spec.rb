@@ -34,6 +34,6 @@ describe Account do
     account = Account.new
     account.deposit(100)
     account.withdraw(42)
-    specify { expect { account.show_statement }.to output("date || credit || debit || balance\n#{Date.today.strftime('%d-%m-%Y')} || 100 || - || 100\n#{Date.today.strftime('%d-%m-%Y')} || - || 42 || 58\n").to_stdout }
+    specify { expect { account.show_statement }.to output("date || credit || debit || balance\n#{Date.today.strftime('%d-%m-%Y')} || - || 42 || 58\n#{Date.today.strftime('%d-%m-%Y')} || 100 || - || 100\n").to_stdout }
   end
 end
