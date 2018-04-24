@@ -6,5 +6,10 @@ describe Account do
       acc = Account.new
       expect(acc.balance).to eq 0
     end
+
+    it 'is instantiated with an blank account history' do
+      acc = Account.new
+      expect(acc.account_history).to eq []
+    end
   end
 end
