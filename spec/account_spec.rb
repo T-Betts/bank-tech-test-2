@@ -1,15 +1,23 @@
 require 'account'
 
 describe Account do
+  before(:each) do
+    @acc = Account.new
+  end
   describe '#new' do
     it 'is instantiated with a balance of 0' do
-      acc = Account.new
-      expect(acc.balance).to eq 0
+      expect(@acc.balance).to eq 0
     end
 
     it 'is instantiated with an blank account history' do
-      acc = Account.new
-      expect(acc.account_history).to eq []
+      expect(@acc.account_history).to eq []
+    end
+  end
+
+  describe '#deposit' do
+    it 'can deposit funds into account' do
+      @acc.deposit(100)
+      expect(@acc.balance).to eq 100
     end
   end
 end
