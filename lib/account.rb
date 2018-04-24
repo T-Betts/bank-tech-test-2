@@ -6,14 +6,14 @@ class Account
     @account_history = []
   end
 
-  def deposit(amount, transaction = Transaction)
+  def deposit(amount, transaction = Transaction.new('deposit', amount))
     @balance += amount
-    @account_history << [transaction.new('deposit', amount), @balance]
+    @account_history << [transaction, @balance]
   end
 
-  def withdraw(amount, transaction = Transaction)
+  def withdraw(amount, transaction = Transaction.new('withdrawal', amount))
     @balance -= amount
-    @account_history << [transaction.new('withdrawal', amount), @balance]
+    @account_history << [transaction, @balance]
   end
 
   def show_statement
