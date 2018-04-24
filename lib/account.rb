@@ -1,4 +1,4 @@
-require 'transaction'
+require_relative 'transaction.rb'
 
 class Account
   def initialize(balance = 0)

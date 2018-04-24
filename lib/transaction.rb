@@ -1,4 +1,4 @@
-require 'datestamp'
+require_relative 'datestamp.rb'
 
 class Transaction
   def initialize(type, amount, date = DateStamp.new.current_date)
