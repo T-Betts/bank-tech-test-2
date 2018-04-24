@@ -1,3 +1,5 @@
+require 'datestamp'
+
 describe DateStamp do
   describe '#current_date' do
     it 'returns the current date' do
