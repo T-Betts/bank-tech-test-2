@@ -1,9 +1,10 @@
 require 'datestamp'
 
 class Transaction
-  def initialize(date = DateStamp.new.current_date)
+  def initialize(type, date = DateStamp.new.current_date)
     @date = date
+    @type = type
   end
 
-  attr_reader :date
+  attr_reader :date, :type
 end
