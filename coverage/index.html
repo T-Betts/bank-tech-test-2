@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-24T20:37:52+01:00">2018-04-24T20:37:52+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-04-24T20:38:29+01:00">2018-04-24T20:38:29+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.81
+         1.65
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>3</b> files in total.
-    <b>54</b> relevant lines. 
-    <span class="green"><b>54</b> lines covered</span> and
+    <b>6</b> files in total.
+    <b>81</b> relevant lines. 
+    <span class="green"><b>81</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -61,13 +61,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#cb22491ca138d3a58c79b2ffa234c7250a3a1d74" class="src_link" title="lib/datestamp.rb">lib/datestamp.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#6c28329063b984ea8cb858ce1a912ccceb7bbe50" class="src_link" title="lib/transaction.rb">lib/transaction.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>11</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0.0</td>
+        <td>1.9</td>
       </tr>
       
       <tr>
@@ -78,6 +88,26 @@
         <td>33</td>
         <td>0</td>
         <td>1.5</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#db5f65c3c98abe2df5eccb71baa918e60563fa65" class="src_link" title="spec/datestamp_spec.rb">spec/datestamp_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>9</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#52a5d745178363856295df8e9a048875fdcd4bff" class="src_link" title="spec/transaction_spec.rb">spec/transaction_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>21</td>
+        <td>11</td>
+        <td>11</td>
+        <td>0</td>
+        <td>1.2</td>
       </tr>
       
     </tbody>
@@ -331,13 +361,13 @@
 </div>
 
       
-        <div class="source_table" id="6c28329063b984ea8cb858ce1a912ccceb7bbe50">
+        <div class="source_table" id="cb22491ca138d3a58c79b2ffa234c7250a3a1d74">
   <div class="header">
-    <h3>lib/transaction.rb</h3>
+    <h3>lib/datestamp.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>0</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -345,70 +375,131 @@
   <pre>
     <ol>
       
-        <li class="never" data-hits="" data-linenumber="1">
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"># require_relative &#39;datestamp.rb&#39;</code>
+          <code class="ruby">require &#39;date&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"># class Transaction</code>
+          <code class="ruby">class DateStamp</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   def initialize(type, amount, date = DateStamp.new.current_date)</code>
+          <code class="ruby">  def current_date</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#     @type = type</code>
+          <code class="ruby">    Date.today.strftime(&#39;%d-%m-%Y&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">#     @amount = amount</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">#     @date = date</code>
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="6c28329063b984ea8cb858ce1a912ccceb7bbe50">
+  <div class="header">
+    <h3>lib/transaction.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require_relative &#39;datestamp.rb&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Transaction</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(type, amount, date = DateStamp.new.current_date)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @type = type</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @amount = amount</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @date = date</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">#   attr_reader :amount, :date, :type</code>
+          <code class="ruby">  attr_reader :amount, :date, :type</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby"># end</code>
+          <code class="ruby">end</code>
         </li>
       
     </ol>
@@ -761,6 +852,224 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="db5f65c3c98abe2df5eccb71baa918e60563fa65">
+  <div class="header">
+    <h3>spec/datestamp_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;datestamp&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe DateStamp do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#current_date&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;returns the current date&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(DateStamp.new.current_date).to eq Date.today.strftime(&#39;%d-%m-%Y&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="52a5d745178363856295df8e9a048875fdcd4bff">
+  <div class="header">
+    <h3>spec/transaction_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>11</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;transaction&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe Transaction do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;#new&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    before(:each) do</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      @trn = Transaction.new(&#39;deposit&#39;, 50, &#39;10-05-2018&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;is instantiated with a date&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@trn.date).to eq &#39;10-05-2018&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;is instantiated with a type&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@trn.type).to eq &#39;deposit&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39;is instantiated with an amount&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@trn.amount).to eq 50</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
