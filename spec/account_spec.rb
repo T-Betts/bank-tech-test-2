@@ -20,6 +20,11 @@ describe Account do
       @acc.deposit(100)
       expect(@acc.balance).to eq 100
     end
+
+    it 'logs deposit in the account history' do
+      @acc.deposit(100)
+      expect(@acc.account_history[0][0].amount).to eq 100
+    end
   end
 
   describe '#withdraw' do
@@ -27,6 +32,12 @@ describe Account do
       @acc.deposit(100)
       @acc.withdraw(27)
       expect(@acc.balance).to eq 73
+    end
+
+    it 'logs withdrawal in the account history' do
+      @acc.deposit(100)
+      @acc.withdraw(27)
+      expect(@acc.account_history[1][0].amount).to eq 27
     end
   end
 
