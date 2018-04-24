@@ -17,13 +17,18 @@ class Account
   end
 
   def show_statement
+    print_header
+    print_all_transactions
+  end
+
+  def print_header
     puts 'date || credit || debit || balance'
+  end
+
+  def print_all_transactions
     @account_history.each do |transaction|
-      if transaction[0].type == 'deposit'
-        puts "#{transaction[0].date} || #{transaction[0].amount} || - || #{transaction[1]}"
-      else
-        puts "#{transaction[0].date} || - || #{transaction[0].amount} || #{transaction[1]}"
-      end
+      puts "#{transaction[0].date} || #{transaction[0].amount} || - || #{transaction[1]}" if transaction[0].type == 'deposit'
+      puts "#{transaction[0].date} || - || #{transaction[0].amount} || #{transaction[1]}" if transaction[0].type == 'withdrawal'
     end
   end
 
