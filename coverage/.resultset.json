@@ -7,6 +7,7 @@
         1,
         6,
         4,
+        2,
         null,
         1,
         7,
@@ -60,6 +61,7 @@
       ],
       "/Users/thomasbetts/Makers-Academy/week-10/bank-tech-test-2/lib/account.rb": [
         1,
+        1,
         null,
         1,
         1,
@@ -80,16 +82,6 @@
         1,
         1,
         1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        2,
-        null,
         null,
         null,
         1,
@@ -107,8 +99,35 @@
         1,
         null
       ],
+      "/Users/thomasbetts/Makers-Academy/week-10/bank-tech-test-2/lib/printer.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
       "/Users/thomasbetts/Makers-Academy/week-10/bank-tech-test-2/spec/printer_spec.rb": [
-
+        1,
+        null,
+        1,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null
       ],
       "/Users/thomasbetts/Makers-Academy/week-10/bank-tech-test-2/spec/transaction_spec.rb": [
         1,
@@ -130,6 +149,6 @@
         null
       ]
     },
-    "timestamp": 1524650767
+    "timestamp": 1524652356
   }
 }

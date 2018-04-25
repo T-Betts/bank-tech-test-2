@@ -1,4 +1,5 @@
 require_relative 'transaction.rb'
+require_relative 'printer.rb'
 
 class Account
   def initialize(balance = 0)
@@ -16,19 +17,9 @@ class Account
     @account_history << [transaction.time, '-', transaction.amount, @balance]
   end
 
-  def show_statement
-    print_header
-    print_all_transactions
-  end
-
-  def print_header
-    puts 'date || credit || debit || balance'
-  end
-
-  def print_all_transactions
-    @account_history.reverse.each do |transaction|
-      puts transaction.join(' || ')
-    end
+  def show_statement(printer = Printer.new, account_history = @account_history)
+    printer.print_header
+    printer.print_all_transactions(account_history)
   end
 
   attr_reader :balance, :account_history
