@@ -1,11 +1,10 @@
-require_relative 'datestamp.rb'
+require 'time'
 
 class Transaction
-  def initialize(type, amount, date = DateStamp.new.current_date)
-    @type = type
+  def initialize(amount, time = Time.new.strftime('%d-%m-%Y'))
     @amount = amount
-    @date = date
+    @time = time
   end
 
-  attr_reader :amount, :date, :type
+  attr_reader :amount, :time
 end

@@ -1,8 +1,8 @@
 require 'account'
 
 describe Account do
-  let(:dep_double) { double('deposit', type: 'deposit', amount: 100, date: '01-01-2018') }
-  let(:withd_double) { double('withdrawal', type: 'withdrawal', amount: 27, date: '01-01-2018') }
+  let(:dep_double) { double('deposit', amount: 100, time: '01-01-2018') }
+  let(:withd_double) { double('withdrawal', amount: 27, time: '01-01-2018') }
 
   before(:each) do
     @acc = Account.new
@@ -26,7 +26,7 @@ describe Account do
 
     it 'logs deposit in the account history' do
       @acc.deposit(100, dep_double)
-      expect(@acc.account_history[0][0].amount).to eq 100
+      expect(@acc.account_history[0][1]).to eq 100
     end
   end
 
@@ -40,7 +40,7 @@ describe Account do
     it 'logs withdrawal in the account history' do
       @acc.deposit(100, dep_double)
       @acc.withdraw(27, withd_double)
-      expect(@acc.account_history[1][0].amount).to eq 27
+      expect(@acc.account_history[1][2]).to eq 27
     end
   end
 

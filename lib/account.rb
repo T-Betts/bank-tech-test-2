@@ -6,14 +6,14 @@ class Account
     @account_history = []
   end
 
-  def deposit(amount, transaction = Transaction.new('deposit', amount))
+  def deposit(amount, transaction = Transaction.new(amount))
     @balance += amount
-    @account_history << [transaction, @balance]
+    @account_history << [transaction.time, transaction.amount, '-', @balance]
   end
 
-  def withdraw(amount, transaction = Transaction.new('withdrawal', amount))
+  def withdraw(amount, transaction = Transaction.new(amount))
     @balance -= amount
-    @account_history << [transaction, @balance]
+    @account_history << [transaction.time, '-', transaction.amount, @balance]
   end
 
   def show_statement
@@ -27,8 +27,7 @@ class Account
 
   def print_all_transactions
     @account_history.reverse.each do |transaction|
-      puts "#{transaction[0].date} || #{transaction[0].amount} || - || #{transaction[1]}" if transaction[0].type == 'deposit'
-      puts "#{transaction[0].date} || - || #{transaction[0].amount} || #{transaction[1]}" if transaction[0].type == 'withdrawal'
+      puts transaction.join(' || ')
     end
   end
 
